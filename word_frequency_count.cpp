@@ -28,7 +28,7 @@ int readCharacters(char data[]) {
 	
 	fin >> noskipws;          
 	fin >> ch;  
-	ch=upperToLowerCase(ch);//changes all characters to lower case for consistency.  
+	ch=upperToLowerCase(ch);//changes all characters to lower case. Makes data easier to manipulate.  
 	while (!fin.eof()) {           
 		data[i] = ch;          
 		i = i + 1;
