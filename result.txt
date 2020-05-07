@@ -1,0 +1,59 @@
+Words===============================Frequency
+a					4
+after					1
+alphabetical					1
+an					2
+and					1
+appears					1
+be					1
+cater					1
+consists					1
+contains					1
+could					1
+count					2
+distinct					1
+do					1
+each					1
+english					1
+even					1
+fifty					2
+file					1
+for					1
+frequency					1
+full					1
+however					1
+if					1
+in					3
+increment					1
+is					2
+listing					1
+maximum					1
+more					1
+must					1
+not					1
+number					1
+of					6
+output					1
+passage					5
+print					1
+program					1
+still					1
+stored					2
+table					1
+than					1
+the					8
+those					2
+times					1
+to					1
+which					1
+word					1
+words					6
+write					1
+
+
+
+
+
+These word(s) were unable to be stored.
+Words=====================================Frequency
+you						1

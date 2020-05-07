@@ -1,0 +1,6 @@
+Write a program to do a frequency count of the words in an English passage
+The passage is stored in a file passage Output consists of an alphabetical listing of the words and the
+number of times each word appears in the passage
+Cater for a maximum of fifty words If the passage contains more than fifty distinct words
+print those words which could not be stored. However even after the table is full you 
+must still increment the count of those words which have already been stored
