@@ -12,7 +12,6 @@ char upperToLowerCase (char ch){
 	return ch;
 }
 int readCharacters(char data[]) {        
- 
     ifstream fin;     				
 	char ch;     
 	int i;             
@@ -52,7 +51,6 @@ bool isLetter (char c) {
 		return false;
 }
 int getWord (char words[], int start, char word[]) { 
- 
     int i, j, length;         
 	
 	length = strlen (words);			// find how many characters in words
@@ -70,7 +68,6 @@ int getWord (char words[], int start, char word[]) {
 		i = i + 1;
 		j = j + 1;     
 	}       
- 
     word[j]= '\0';          
     
 	return i;							// starting position to look for next word
@@ -148,7 +145,7 @@ void countWords(char allWords[]){
 	output<<"Words"<<"==============================="<<"Frequency"<<endl;
 	for(int jk=0;jk<y;jk++){
 		if(jk<50){
-			output<<tempW2[jk]<<"					"<<count[jk]<<endl;
+			output<<tempW2[jk]<<"\t\t\t\t\t\t"<<count[jk]<<endl;
 			cap=jk;
 		}	
 	}
@@ -159,7 +156,7 @@ void countWords(char allWords[]){
 	output<<"These word(s) were unable to be stored."<<endl;
 	output<<"Words"<<"====================================="<<"Frequency"<<endl;
 	for(int lp=cap; lp<y;lp++){
-		output<<tempW2[lp]<<"						"<<count[lp]<<endl;
+		output<<tempW2[lp]<<"\t\t\t\t\t\t"<<count[lp]<<endl;
 	}
 
 }
