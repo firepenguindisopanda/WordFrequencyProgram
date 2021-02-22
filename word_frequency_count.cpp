@@ -5,12 +5,41 @@
 #include <cstring>
 
 using namespace std;
+char upperToLowerCase (char ch);
+int readCharacters(char data[]);
+bool isLetter (char c);
+int getWord (char words[], int start, char word[]);
+void sort(string array[], int len);
+void countWords(char allWords[]);
+
+int main(){
+	ifstream in;
+	
+	char word;
+	int count=0, i = 0, chFind, wFind;
+	char data[500];
+	char words[50];
+	chFind=readCharacters(data);
+	cout<<endl;
+	countWords(data);
+	cout<<"Program Excuted and output placed into the result.txt file"<<endl;
+
+	return 0;
+}
+
+
+
+//Returns a character in lowercase form
+//eg: if character is 'A' it will return 'a'
 char upperToLowerCase (char ch){
 	if((ch>= 'A') && (ch<='Z')){
 		ch=ch+32;
 	}
 	return ch;
 }
+
+//Returns an integer, i, indicating the amount of characters present in the file passage.txt
+//Reads each character from the text file and changes it to it's lowercase form and adds it to an array
 int readCharacters(char data[]) {        
     ifstream fin;     				
 	char ch;     
@@ -42,7 +71,8 @@ int readCharacters(char data[]) {
 	return i; 
 
 }
-
+//Returns a boolean value, True or False.
+//Accepts a single character and determines if it is a letter.
 bool isLetter (char c) {
 	if ((c >= 'A' && c <= 'Z') ||
 	    (c >= 'a' && c <= 'z'))
@@ -50,6 +80,14 @@ bool isLetter (char c) {
 	else
 		return false;
 }
+//Returns i, an integer value, that represents the starting point to look for another word
+//This function takes each seperated character and remakes the word into a c-string
+/*
+Parameters: 
+words[] -> character array, contains an array of each character from the text file ending in '\0'
+start -> integer
+word[] -> character array, contains an array of c-strings 
+*/
 int getWord (char words[], int start, char word[]) { 
     int i, j, length;         
 	
@@ -87,6 +125,7 @@ void sort(string array[], int len) {
 		}
 	}
 }
+//Outputs the frequency of words counted to results.txt
 void countWords(char allWords[]){
 	ofstream output;
 	int length, wcount, j=0, i=0, x=0, y=0, te=0, tr, counter=0, ty=0, cap;
@@ -97,7 +136,7 @@ void countWords(char allWords[]){
 	char tempC[100];//tempC: temporary Character array
 	output.open("result.txt");
 	if(!output.is_open()){
-		cout<<"Error opening file shania.txt"<<endl;
+		cout<<"Error opening file result.txt"<<endl;
 		return ;
 	}
 	length=strlen(allWords);
@@ -163,21 +202,4 @@ void countWords(char allWords[]){
 
 
 
-int main(){
-	ifstream in;
-	
-	char word;
-	int count=0, i = 0, chFind, wFind;
-	char data[500];
-	char words[50];
-	chFind=readCharacters(data);
 
-	cout<<endl;
-	
-	//getWords(data, words);
-	
-	countWords(data);
-	cout<<"Program Excuted and output placed into the result.txt file"<<endl;
-
-	return 0;
-}
